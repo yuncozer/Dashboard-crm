@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@szhsin/react-menu": "^3.3.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "react": "^18.2.0",
+    "react-date-object": "^2.1.5",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.3"

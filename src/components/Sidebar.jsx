@@ -16,20 +16,33 @@ import {
         
     } 
     from "react-icons/ri";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const Sidebar = () => {
     
     const [showMenu, setShowMenu] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
+    const exportPDF = () => {
+        const input = document.getElementById("Prueba") 
+        html2canvas(input, {logging: true, letterRendering: 1, useCORS: true}).then(canvas => {
+            const imgWidth = 208;
+            const imgHeight = canvas.height * imgWidth / canvas.width;
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+            pdf.save("prueba.pdf")
+        })
+    }
 
     return (
     <>
         {/* Menu */}
-        <div className={`bg-secondary-100 xl:h-[100vh] overflow-y-auto fixed xl:static w-[80%] sm:w-[40%] md:w-[40%] lg:w-[30%] xl:w-auto
+        <div id="Prueba" className={`bg-secondary-100 xl:h-[100vh] overflow-y-auto fixed xl:static w-[80%] sm:w-[40%] md:w-[40%] lg:w-[30%] xl:w-auto
                         h-full top-0 p-4 flex flex-col justify-between z-50 ${showMenu ? 'left-0' : '-left-full'} transition-all`}>
         <div>
             <h1 className='flex items-center text-center text-2xl font-bold text-white mb-10'>
-            <RiDashboard2Fill    className='text-primary mr-2'/>Dashboard KPIs {/*<span className='text-primary text-4xl'>.</span> */}
+            <RiDashboard2Fill    className='text-primary mr-2'/>Dashboard CRM {/*<span className='text-primary text-4xl'>.</span> */}
             </h1>
             {/* Items */}
             <ul>
@@ -96,7 +109,7 @@ const Sidebar = () => {
                 </li>
                 {/* DownLoad views */}
                 <li>
-                    <Link   className='flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors'
+                    <Link onClick={ () => exportPDF() }  className='flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors'
                             to='/'>
                         <RiDownload2Fill    className='text-primary'/>Download View
                     </Link>
