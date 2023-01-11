@@ -9,14 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.2.5",
     "@szhsin/react-menu": "^3.3.1",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-date-object": "^2.1.5",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
-    "react-router-dom": "^6.4.3"
+    "react-router-dom": "^6.4.3",
+    "recharts": "^2.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.22",

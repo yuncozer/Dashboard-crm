@@ -24,7 +24,7 @@ const Sidebar = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
     const exportPDF = () => {
-        const input = document.getElementById("Prueba") 
+        const input = document.getElementById("body") 
         html2canvas(input, {logging: true, letterRendering: 1, useCORS: true}).then(canvas => {
             const imgWidth = 208;
             const imgHeight = canvas.height * imgWidth / canvas.width;
@@ -34,6 +34,7 @@ const Sidebar = () => {
             pdf.save("prueba.pdf")
         })
     }
+    
 
     return (
     <>
@@ -67,7 +68,7 @@ const Sidebar = () => {
                                         overflow-y-hidden transition-all`
                                     }>
                         <li>
-                            <Link to='/' className='py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3
+                            <Link to='/dashboard/contacts' className='py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3
                                                     before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px]
                                                     before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 
                                                     hover:text-white hover:before:bg-primary transition-colors'>
@@ -75,7 +76,7 @@ const Sidebar = () => {
                             </Link> 
                         </li>
                         <li>
-                            <Link to='/' className='py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3
+                            <Link to='/dashboard/companies' className='py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3
                                                     before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px]
                                                     before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100
                                                     hover:text-white hover:before:bg-primary transition-colors'>
@@ -83,7 +84,7 @@ const Sidebar = () => {
                             </Link> 
                         </li>
                         <li>
-                            <Link to='/' className='py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3
+                            <Link to='/dashboard/deals' className='py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3
                                                     before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px]
                                                     before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100
                                                     hover:text-white hover:before:bg-primary transition-colors'>
@@ -91,7 +92,7 @@ const Sidebar = () => {
                             </Link> 
                         </li>
                         <li>
-                            <Link to='/' className='py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3
+                            <Link to='/dashboard/tickets' className='py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3
                                                     before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px]
                                                     before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100
                                                     hover:text-white hover:before:bg-primary transition-colors'>

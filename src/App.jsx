@@ -3,14 +3,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom ";
 // Layout
 import { LayoutAuth } from "./layouts/LayoutAuth";
 import { LayoutAdmin } from "./layouts/LayoutAdmin";
+
 // Pages Auth
 import { Login } from "./pages/auth/Login";
 import { Register } from "./pages/auth/Register";
+import { ForgetPassword } from "./pages/auth/ForgetPassword";
+
 // Pages Admin
 import { Home } from "./pages/admin/Home";
-import { Chat } from "./pages/admin/Chat";
+import { Contacts } from "./pages/admin/Contacts";
+import { Companies } from "./pages/admin/Companies";
+import { Deals } from "./pages/admin/Deals";
+import { Tickets } from "./pages/admin/Tickets";
+
 import { Error404 } from "./pages/Error404";
-import { ForgetPassword } from "./pages/auth/ForgetPassword";
+
 
 function App() {
 
@@ -22,9 +29,12 @@ function App() {
           <Route path="registro" element={<Register/>}/>
           <Route path="forgetPass" element={<ForgetPassword/>}/>
         </Route>
-        <Route path="/" element={<LayoutAdmin />}> 
+        <Route path="/dashboard" element={<LayoutAdmin />}> 
           <Route index element={<Home/> }/>
-          <Route path="chat" element={<Chat/>} />
+          <Route path="contacts" element={<Contacts/>} />
+          <Route path="companies" element={<Companies/>} />
+          <Route path="deals" element={<Deals/>} />
+          <Route path="tickets" element={<Tickets/>} />
         </Route>
         <Route path="*" element={<Error404/>}/>
       </Routes>
