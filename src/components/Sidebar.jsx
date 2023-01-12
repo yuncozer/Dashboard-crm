@@ -104,7 +104,7 @@ const Sidebar = () => {
                 {/* Account Manager Activity */}
                 <li>
                     <Link   className='flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors'
-                            to='/'>
+                            to='/dashboard/accountmanagers'>
                         <RiBarChart2Line    className='text-primary'/>Account Manager Activity
                     </Link>
                 </li>

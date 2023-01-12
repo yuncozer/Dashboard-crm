@@ -1,16 +1,17 @@
 import React from 'react'
 import { RiDownload2Fill } from "react-icons/ri";
 import { CardHubspot } from '../../components/CardHubspot';
-import CardChart from '../../components/CardChart';
+import {CardChart} from '../../components/CardChart';
 import { CardStatitics } from '../../components/CardStatitics';
-import CardChartPie from '../../components/CardChartPie';
+import {CardChartPie} from '../../components/CardChartPie';
+import { TableList } from '../../components/TableList';
 
 export const Contacts = () => {
   
     return (
       <div id='Page'>
         
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-4 sm:gap-4'>
           {/* COL 1 Title */}
             <div className='inline-grid grid-cols-3 col-start-1 col-end-4 gap-4'>
               <CardChart/>

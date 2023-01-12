@@ -15,8 +15,10 @@ import { Contacts } from "./pages/admin/Contacts";
 import { Companies } from "./pages/admin/Companies";
 import { Deals } from "./pages/admin/Deals";
 import { Tickets } from "./pages/admin/Tickets";
+import { AccountManagers } from "./pages/admin/AccountManagers";
 
 import { Error404 } from "./pages/Error404";
+
 
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
           <Route path="companies" element={<Companies/>} />
           <Route path="deals" element={<Deals/>} />
           <Route path="tickets" element={<Tickets/>} />
+          <Route path="accountmanagers" element={<AccountManagers/>} />
         </Route>
         <Route path="*" element={<Error404/>}/>
       </Routes>

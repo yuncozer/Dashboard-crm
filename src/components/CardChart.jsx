@@ -55,10 +55,8 @@ const wrapperStyle = {
     border: 'none'
 }
 
-export default class CardChart extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
+export const CardChart = () =>{
 
-  render() {
     return (
       <div className='flex flex-row col-start-1 col-end-4 items-center justify-center h-80 rounded-xl bg-secondary-100'>
         {/* <span className='flex text-[#82ca9d] text-xl text-center font-bold ml-8 bg-[#82ca9d]/10 rounded-2xl '>Companies Number</span> */}
@@ -85,7 +83,6 @@ export default class CardChart extends PureComponent {
       </ResponsiveContainer>
       </div>
     );
-  }
 }
 
 

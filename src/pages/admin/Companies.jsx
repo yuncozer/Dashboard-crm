@@ -1,9 +1,9 @@
 import React from 'react'
 import { RiDownload2Fill } from "react-icons/ri";
 import { CardHubspot } from '../../components/CardHubspot';
-import CardChart from '../../components/CardChart';
+import {CardChart} from '../../components/CardChart';
 import { CardStatitics } from '../../components/CardStatitics';
-import CardChartPie from '../../components/CardChartPie';
+import {CardChartPie} from '../../components/CardChartPie';
 
 export const Companies = () => {
   

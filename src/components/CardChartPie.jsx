@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import {   } from "./Header";
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -16,19 +18,20 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
-  return (
+    return (
     <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
       {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
 };
 
-export default class CardChartPie extends PureComponent {
-
-  render() {
+export const CardChartPie = () => {
+    const { pathname } = useLocation();
+    const [layout1, page1] = pathname.split("/").filter((el) => el !== ""); 
+//   render() 
     return (
       <div className='flex flex-col items-center justify-center h-96 rounded-xl bg-secondary-100'>
-       <span className='flex text-[#82ca9d] mt-20 text-xl text-center font-bold bg-[#82ca9d]/10 rounded-2xl '>Companies Number</span> 
+       <span className='flex text-[#82ca9d] mt-20 text-xl text-center font-bold bg-[#82ca9d]/10 rounded-2xl capitalize '>{page1} Number</span> 
       <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={400}>
           <Pie
@@ -50,4 +53,4 @@ export default class CardChartPie extends PureComponent {
       </div>
     );
   }
-}
+

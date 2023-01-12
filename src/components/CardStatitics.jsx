@@ -27,7 +27,7 @@ import {
 
 export const CardStatitics = (statisticsCardsData) => {
   return (
-    <div className='mt-2'>
+    <div className='mt-4'>
         {/* <div className=''>
                 <RiBuildingLine className='text-6xl  bg-purple-500/10 text-purple-500 p-2 box-content rounded-xl
                 absolute -mt-4 grid h-16 w-16 place-items-center'/>
